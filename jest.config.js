@@ -2,8 +2,8 @@ module.exports = {
   name: "errors-stack",
   coverageThreshold: {
     global: {
-      branches: 50,
-      functions: 80,
+      branches: 0,
+      functions: 0,
       lines: 0,
       statements: 0,
     },
