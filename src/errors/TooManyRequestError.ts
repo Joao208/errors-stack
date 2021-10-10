@@ -1,6 +1,6 @@
 class TooManyRequestsError extends Error {
   status: number;
-  constructor(message) {
+  constructor(message: string) {
     super(message);
     this.name = "TooManyRequests";
     this.message = message;
