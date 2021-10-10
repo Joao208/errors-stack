@@ -115,5 +115,8 @@ Throw this error if is an validation error, and array is necessary to throw this
 ```js
 import { ValidationError } from "errors-stack";
 
-throw new ValidationError("message", [new BodyPropertyError("message")]);
+throw new ValidationError({
+  message: "message",
+  validations: [new BodyPropertyError("message")],
+});
 ```
