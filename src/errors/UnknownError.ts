@@ -1,6 +1,6 @@
 class UnknownError extends Error {
   status: number;
-  constructor(message) {
+  constructor(message: string) {
     super(message);
     this.name = "UnknownError";
     this.message = message;

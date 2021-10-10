@@ -1,8 +1,8 @@
 class BodyPropertyError extends Error {
   status: number;
-  constructor(message, name = null) {
+  constructor(message: string) {
     super(message);
-    this.name = name || this.constructor.name;
+    this.name = "BodyPropertyError";
     this.message = message;
     this.status = 400;
   }

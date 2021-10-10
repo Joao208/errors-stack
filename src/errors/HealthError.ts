@@ -1,8 +1,8 @@
 class HealthError extends Error {
   status: number;
-  constructor(message) {
+  constructor(message: string) {
     super(message);
-    this.name = this.constructor.name;
+    this.name = "HealthError";
     this.message = message;
     this.status = 500;
   }

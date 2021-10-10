@@ -1,8 +1,8 @@
 class QueryPropertyError extends Error {
   status: number;
-  constructor(message, name = null) {
+  constructor(message: string) {
     super(message);
-    this.name = name || this.constructor.name;
+    this.name = "QueryPropertyError";
     this.message = message;
     this.status = 400;
   }

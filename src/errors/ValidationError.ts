@@ -1,12 +1,24 @@
+interface IError {
+  name: string;
+  message: string;
+  body: object;
+}
+
 class ValidationError extends Error {
   status: number;
   validations: any;
-  constructor(message, validations) {
+  constructor({
+    message,
+    validations,
+  }: {
+    message: string;
+    validations: Array<IError>;
+  }) {
     super(message);
-    this.name = this.constructor.name;
+    this.name = "ValidationError";
     this.message = message;
     this.status = 400;
-    this.validations = validations.map((error) => ({
+    this.validations = validations.map((error: IError) => ({
       name: error.name,
       message: error.message,
       ...(error.body ? { body: error.body } : {}),
