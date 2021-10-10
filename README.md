@@ -1,7 +1,9 @@
-# models-sequelize
+# Errors-stack
 
-> Error extends javascript
+[![codecov](https://codecov.io/gh/Joao208/errors-stack/branch/main/graph/badge.svg?token=GXOKX31Y8J)](https://codecov.io/gh/Joao208/errors-stack)
 
+
+> A JavaScript error library to make easier, faster and practical the stack of errors.
 ## Usage
 
 Custom errors throw, the errors look like this
@@ -120,3 +122,7 @@ throw new ValidationError({
   validations: [new BodyPropertyError("message")],
 });
 ```
+
+## License
+
+errors-stack is freely distributable under the terms of MIT License.
