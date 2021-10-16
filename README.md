@@ -1,4 +1,4 @@
-# models-sequelize
+# Errors stack
 
 > Error extends javascript
 
