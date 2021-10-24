@@ -6,10 +6,6 @@
 A JavaScript error library to make easier, faster and practical the stack of errors.
 ## Usage
 
-Custom errors throw, the errors look like this
-
-![Captura de tela de 2021-10-09 17-16-45](https://user-images.githubusercontent.com/59159025/136672778-416d223e-42fd-4f19-95b0-9838bc05a6db.png)
-
 ## BodyPropertyError
 
 Throw this error if it is a body property error.
