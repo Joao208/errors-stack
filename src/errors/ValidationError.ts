@@ -1,29 +1,27 @@
 interface IError {
-  name: string;
-  message: string;
-  body: object;
+  name: string
+  message: string
+  body: object
 }
 
-class ValidationError extends Error {
-  status: number;
-  validations: any;
+export class ValidationError extends Error {
+  status: number
+  validations: any
   constructor({
     message,
     validations,
   }: {
-    message: string;
-    validations: Array<IError>;
+    message: string
+    validations: Array<IError>
   }) {
-    super(message);
-    this.name = "ValidationError";
-    this.message = message;
-    this.status = 400;
+    super(message)
+    this.name = 'ValidationError'
+    this.message = message
+    this.status = 400
     this.validations = validations.map((error: IError) => ({
       name: error.name,
       message: error.message,
       ...(error.body ? { body: error.body } : {}),
-    }));
+    }))
   }
 }
-
-export { ValidationError };
