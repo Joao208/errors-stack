@@ -137,6 +137,7 @@ throw new MyError({
   errorParams: { isAuthenticated: false },
 })
 ```
+
 ## License
 
 errors-stack is freely distributable under the terms of MIT License.
