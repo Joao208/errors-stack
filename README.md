@@ -12,9 +12,9 @@ A JavaScript error library to make easier, faster and practical the stack of err
 Throw this error if it is a body property error.
 
 ```js
-import { BodyPropertyError } from "errors-stack";
+import { BodyPropertyError } from 'errors-stack';
 
-throw new BodyPropertyError("message");
+throw new BodyPropertyError('message');
 ```
 
 ## ForbiddenError
@@ -22,9 +22,9 @@ throw new BodyPropertyError("message");
 Throw this error if it is a forbidden error.
 
 ```js
-import { ForbiddenError } from "errors-stack";
+import { ForbiddenError } from 'errors-stack';
 
-throw new ForbiddenError("message");
+throw new ForbiddenError('message');
 ```
 
 ## HealthError
@@ -32,9 +32,9 @@ throw new ForbiddenError("message");
 Throw this error if it is a health error.
 
 ```js
-import { HealthError } from "errors-stack";
+import { HealthError } from 'errors-stack';
 
-throw new HealthError("message");
+throw new HealthError('message');
 ```
 
 ## InternalServiceError
@@ -42,9 +42,9 @@ throw new HealthError("message");
 Throw this error if it is a internal server error.
 
 ```js
-import { InternalServiceError } from "errors-stack";
+import { InternalServiceError } from 'errors-stack';
 
-throw new InternalServiceError("message");
+throw new InternalServiceError('message');
 ```
 
 ## NotFoundError
@@ -52,9 +52,9 @@ throw new InternalServiceError("message");
 Throw this error if it is a not found error.
 
 ```js
-import { NotFoundError } from "errors-stack";
+import { NotFoundError } from 'errors-stack';
 
-throw new NotFoundError("message");
+throw new NotFoundError('message');
 ```
 
 ## ParamPropertyError
@@ -62,9 +62,9 @@ throw new NotFoundError("message");
 Throw this error if it is a param error.
 
 ```js
-import { ParamPropertyError } from "errors-stack";
+import { ParamPropertyError } from 'errors-stack';
 
-throw new ParamPropertyError("message");
+throw new ParamPropertyError('message');
 ```
 
 ## QueryPropertyError
@@ -72,9 +72,9 @@ throw new ParamPropertyError("message");
 Throw this error if it is a query error.
 
 ```js
-import { QueryPropertyError } from "errors-stack";
+import { QueryPropertyError } from 'errors-stack';
 
-throw new QueryPropertyError("message");
+throw new QueryPropertyError('message');
 ```
 
 ## TooManyRequestsError
@@ -82,9 +82,9 @@ throw new QueryPropertyError("message");
 Throw this error if has many requests.
 
 ```js
-import { TooManyRequestsError } from "errors-stack";
+import { TooManyRequestsError } from 'errors-stack';
 
-throw new TooManyRequestsError("message");
+throw new TooManyRequestsError('message');
 ```
 
 ## UnauthorizedError
@@ -92,9 +92,9 @@ throw new TooManyRequestsError("message");
 Throw this error if has unauthorized situation.
 
 ```js
-import { UnauthorizedError } from "errors-stack";
+import { UnauthorizedError } from 'errors-stack';
 
-throw new UnauthorizedError({ message: "message", status: 401 });
+throw new UnauthorizedError({ message: 'message', status: 401 });
 ```
 
 ## UnknownError
@@ -102,9 +102,9 @@ throw new UnauthorizedError({ message: "message", status: 401 });
 Throw this error if error is unknown.
 
 ```js
-import { UnknownError } from "errors-stack";
+import { UnknownError } from 'errors-stack';
 
-throw new UnknownError({ message: "message", status: 401 });
+throw new UnknownError({ message: 'message', status: 401 });
 ```
 
 ## ValidationError
@@ -112,12 +112,31 @@ throw new UnknownError({ message: "message", status: 401 });
 Throw this error if is an validation error, and array is necessary to throw this error.
 
 ```js
-import { ValidationError } from "errors-stack";
+import { ValidationError } from 'errors-stack';
 
 throw new ValidationError({
-  message: "message",
-  validations: [new BodyPropertyError("message")],
+  message: 'message',
+  validations: [new BodyPropertyError('message')],
 });
+```
+
+## Personalized Errors
+
+You can instance new error, with name and params and throw when is necessary
+
+```js
+import { ErrorsStack } from 'errors-stack'
+
+const MyError = ErrorsStack({
+  name: 'MyError',
+  message: 'My default message',
+})
+
+throw new MyError({
+  message: 'My personalized message',
+  status: 500,
+  errorParams: { isAuthenticated: false },
+})
 ```
 
 ## License

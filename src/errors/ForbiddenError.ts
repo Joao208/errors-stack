@@ -1,12 +1,10 @@
-class ForbiddenError extends Error {
-  status: number;
+export class ForbiddenError extends Error {
+  status: number
   constructor(message: string) {
-    super(message);
-    this.name = "ForbiddenError";
-    this.message = message;
-    this.stack = new Error().stack;
-    this.status = 403;
+    super(message)
+    this.name = 'ForbiddenError'
+    this.message = message
+    this.stack = new Error().stack
+    this.status = 403
   }
 }
-
-export { ForbiddenError };

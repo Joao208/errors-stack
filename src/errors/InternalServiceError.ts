@@ -1,11 +1,9 @@
-class InternalServiceError extends Error {
-  status: number;
+export class InternalServiceError extends Error {
+  status: number
   constructor(message: string) {
-    super(message);
-    this.name = "InternalServiceError";
-    this.message = message;
-    this.status = 503;
+    super(message)
+    this.name = 'InternalServiceError'
+    this.message = message
+    this.status = 503
   }
 }
-
-export { InternalServiceError };
