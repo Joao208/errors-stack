@@ -1,5 +1,6 @@
 # Errors stack
 
+[![Sonarcloud Status](https://sonarcloud.io/api/project_badges/measure?project=Joao208_errors-stack&metric=alert_status)](https://sonarcloud.io/dashboard?id=Joao208_errors-stack)
 [![codecov](https://codecov.io/gh/Joao208/errors-stack/branch/main/graph/badge.svg?token=GXOKX31Y8J)](https://codecov.io/gh/Joao208/errors-stack)
 
 
